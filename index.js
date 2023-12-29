@@ -4,7 +4,10 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-const API_URL = "https://rickandmortyapi.com/api";
+
+/* This link is an endpoint for fetching charcter names */
+const API_URL = "https://rickandmortyapi.com/api/character/";
+const data = "INFO";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,6 +15,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
+
+app.post("/", async (req, res)=>{
+  const charId = req.body.id;
+  try{
+    const result = await axios.get(API_URL + charId);
+    const data = result.data;
+    const imgSrc = data.image;
+    res.render("index.ejs", {data:data, imgSrc:imgSrc});
+  }catch(error){
+    console.log(`Error ${error}`);
+    res.render("index.ejs", {data:"404 Error"});
+  }
+})
+
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
