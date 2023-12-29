@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
     <title>Rick & Morty</title>
-</head>
-<body>
-    <h1 class="text-red-700 text-4xl">Bickle Rick 🥒</h1>
-</body>
+  </head>
+  <body class="bg-slate-300 grid grid-rows-2 gap-20 place-items-center">
+    <div class="header flex justify-center items-center mt-2">
+      <img class="size-12" src="./images/rick.png" alt="rick-image" />
+      <h1 class="text-blue-600 font-bold text-4xl">
+        Rick <span class="text-blue-400">&</span> Morty 🥒
+      </h1>
+    </div>
+    <!---->
+    <div class="flex flex-col">
+        <form method="post">
+            <div class="flex justify-end mb-5">
+                <label class="text-lg font-semibold text-blue-800" for="char-id">Id:</label>
+                <input class="bg-green-500 outline-blue-500 text-white indent-2" inputmode="numeric" id="char-id" name="id">
+            </div>
+            <div>
+                <label for="char" class="text-lg font-semibold text-blue-800">Name:</label>
+                <input class="bg-green-500 outline-blue-500 text-white indent-2" type="text" id="char" name="charcter">
+            </div>
+        </form>
+    </div>
+    <div class="result mt-5">
+        <p class="text-lg font-bold text-green-700">Charcter Info:</p>
+    </div>
+  </body>
 </html>
