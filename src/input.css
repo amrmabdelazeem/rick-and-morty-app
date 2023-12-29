@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+label{
+    @apply text-lg font-semibold text-blue-800 mr-1;
+}
+input{
+    @apply bg-green-500 outline-blue-500 text-white indent-2 rounded-md p-2;
+}
+
+li:not(:last-child){
+    @apply text-center text-green-700;
+}
