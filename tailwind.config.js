@@ -2,7 +2,7 @@
 export default {
   content: ["./css/**/*.{html,js,ejs}", "./views/*.ejs"],
   theme: {
-    extend: {},
+    extend: {fontFamily: {horror:"Patrick Hand"}},
   },
   plugins: [],
 };
