@@ -49,7 +49,6 @@ hint: if you run just the command ```node``` or ```nodemon``` in the directory t
 * **views/**: Contains the EJS templates for rendering the HTML pages.
 * **public/**: Includes static assets such as stylesheets and images.
 * **src/**: Includes main file for tailwindcss.
-* **partials/**: For EJS header and footer templates.
 
 ## Dependancies
 * Express: A minimal and flexible Node.js web application framework.
