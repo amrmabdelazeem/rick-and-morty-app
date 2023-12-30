@@ -16,20 +16,20 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// app.post("/", async (req, res)=>{
-//   const charId = req.body.id;
-//   try{
-//     const result = await axios.get(API_URL + charId);
-//     const data = result.data;
-//     const imgSrc = data.image;
-//     res.render("index.ejs", {data:data, imgSrc:imgSrc});
-//   }catch(error){
-//     console.log(`Error ${error}`);
-//     res.render("index.ejs", {data:"404 Error"});
-//   }
-// })
+app.post("/searchId", async (req, res)=>{
+  const charId = req.body.id;
+  try{
+    const result = await axios.get(API_URL + charId);
+    const data = result.data;
+    const imgSrc = data.image;
+    res.render("index.ejs", {data:data, imgSrc:imgSrc});
+  }catch(error){
+    console.log(`Error ${error}`);
+    res.render("index.ejs", {data:"404 Error"});
+  }
+})
 
-app.post("/", async (req, res)=>{
+app.post("/searchName", async (req, res)=>{
   const charName = req.body.character;
   try{
     const result = await axios.get(API_URL + `?name=${charName}`);

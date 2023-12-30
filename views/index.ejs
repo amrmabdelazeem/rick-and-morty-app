@@ -16,7 +16,7 @@
     </div>
     <!---->
     <div>
-        <form action="/" method="post" class="grid place-items-end row-start-2 md:col-start-2 md:col-end-3">
+        <form method="post" class="grid place-items-end row-start-2 md:col-start-2 md:col-end-3">
             <div class="flex mb-5">
                 <label for="char-id">Id:</label>
                 <input inputmode="numeric" id="char-id" name="id" autocomplete="off">
@@ -25,7 +25,7 @@
                 <label for="char">Name:</label>
                 <input type="text" id="char" name="character" autocomplete="off">
             </div>
-            <button class="mt-3 border w-10 place-self-center md:place-self-auto md:self-end px-2 rounded-md border-green-500 bg-green-500">🥒</button>
+            <button id="btn" class="mt-3 border w-10 place-self-center md:place-self-auto md:self-end px-2 rounded-md border-green-500 bg-green-500">🥒</button>
         </form>
     </div>
     <div class="pl-3 place-self-start row-start-3 md:col-start-2 md:row-start-2 mb-5 mt-20 md:mt-0">
@@ -45,13 +45,16 @@
     <script>
       const charId = document.getElementById("char-id");
       const charName = document.getElementById("char");
+      const btn = document.getElementById("btn");
       charId.addEventListener("input", ()=>{
         charName.disabled = true;
         charName.style.backgroundColor = "red";
+        btn.setAttribute("formaction", "/searchId");
       })
       charName.addEventListener("input", ()=>{
         charId.disabled = true;
         charId.style.backgroundColor = "red";
+        btn.setAttribute("formaction", "/searchName")
       })
     </script>
   </body>
