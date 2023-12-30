@@ -23,7 +23,7 @@
             </div>
             <div>
                 <label for="char">Name:</label>
-                <input type="text" id="char" name="charcter" autocomplete="off">
+                <input type="text" id="char" name="character" autocomplete="off">
             </div>
             <button class="mt-3 border w-10 place-self-center md:place-self-auto md:self-end px-2 rounded-md border-green-500 bg-green-500">🥒</button>
         </form>
@@ -42,5 +42,17 @@
     <footer class=" text-center row-start-4 col-span-2 mb-3 md:mt-14">
         <p class="text-green-700 ">All rights reserved to the rick and morty api creators and the developer AMR ABDELAZEEM</p>
     </footer>
+    <script>
+      const charId = document.getElementById("char-id");
+      const charName = document.getElementById("char");
+      charId.addEventListener("input", ()=>{
+        charName.disabled = true;
+        charName.style.backgroundColor = "red";
+      })
+      charName.addEventListener("input", ()=>{
+        charId.disabled = true;
+        charId.style.backgroundColor = "red";
+      })
+    </script>
   </body>
 </html>

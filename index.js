@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 /* This link is an endpoint for fetching charcter names */
-const API_URL = "https://rickandmortyapi.com/api/character/?name=rick";
+const API_URL = "https://rickandmortyapi.com/api/character/";
 const data = "INFO";
 
 app.use(express.static("public"));
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res)=>{
   const charName = req.body.character;
   try{
-    const result = await axios.get(API_URL);
+    const result = await axios.get(API_URL + `?name=${charName}`);
     const data = result.data.results;
     
     let index = Object.keys(data);
