@@ -29,13 +29,15 @@
         </form>
     </div>
     <div class="pl-3 justify-self-center row-start-3 mb-5 md:place-self-start md:col-start-2 md:row-start-2 md:mt-0">
-        <ul class="text-lg font-bold text-blue-800">Charcter Info:
             <% if(locals.data){ %>
+              <ul class="text-lg font-bold text-blue-800">Charcter Info:
                 <li><span class="text-blue-800">Name:</span> <%=data.name%></li>
                 <li><span class="text-blue-800">Species:</span> <%=data.species%></li>
                 <li><span class="text-blue-800">Origin:</span> <%=data.origin.name%></li>
                 <li><span class="text-blue-800">Status:</span> <%=data.status%></li>
-                <li><img src=<%=imgSrc%> alt="avatar"></li>
+                <li><img class="rounded-md" src=<%=imgSrc%> alt="avatar"></li>
+            <% }else{ %>
+              <p class="text-lg font-bold text-blue-800">Search for Rick and Morty's Characters with either IDs or Names👽</p>
             <% } %>
         </ul>
     </div>
