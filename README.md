@@ -1,6 +1,6 @@
 # Rick and Morty NodeJS
 
-Welcome to the Rick and Morty empire! This is a simple search application built using Node.js, EJS (Embedded JavaScript templates), TailwindCSS Axios and Rick and Morty API.
+Welcome to the Rick and Morty empire! This is a simple search application built using Node.js, ExpressJS, EJS (Embedded JavaScript templates), TailwindCSS Axios and Rick and Morty API.
 This project allows you to search with over 800+ indices of Rick and Morty characters, and search by name if it's the right name you'll get a random character from list of chars with the same name.
 
 The project is responsive on all devices.
