@@ -5,6 +5,11 @@ This project allows you to search with over 800+ indices of Rick and Morty chara
 
 The project is responsive on all devices.
 
+## Preview
+* Destkop:
+  
+![Desktop-view](https://github.com/amrmabdelazeem/rick-and-morty-app/assets/39915155/c3c7cf80-8933-47f0-8682-bbc3dd601ce0)
+
 
 ## Getting Started
 To get started with the project, follow these steps:
